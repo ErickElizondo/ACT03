@@ -4,8 +4,9 @@ public class Clase {
     private Instructor instructor;
     private boolean esTemporal;
     private int numeroClase;
-    private ArrayList<Integer> hora;
-    private ArrayList<Cliente> listaClientes;
+
+    private ArrayList<Integer> hora = new ArrayList<>();
+    private ArrayList<Cliente> listaClientes = new ArrayList<>();
 
     public Clase(Instructor instructor, boolean esTemporal, int numeroClase) {
         this.instructor = instructor;
@@ -52,4 +53,5 @@ public class Clase {
     public void setNumeroClase(int numeroClase) {
         this.numeroClase = numeroClase;
     }
+
 }

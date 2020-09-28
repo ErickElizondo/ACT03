@@ -1,19 +1,26 @@
 package controller;
-
 import model.Servicio;
 
-public class ServicioController {
-  private Servicio model;
-  
-  public ServicioController(Servicio model) {
-	this.model = model;
-  }
+import java.util.ArrayList;
 
-  public Servicio getModel() {
+public class ServicioController {
+  private ArrayList<Servicio> model = new ArrayList<>();
+
+  public ArrayList<Servicio> getModel() {
     return model;
   }
 
-  public void setModel(Servicio model) {
+  public void setModel(ArrayList<Servicio> model) {
     this.model = model;
   }
+  
+  public Servicio findServicio(int numServicio){
+    for (Servicio target:model
+         ) {
+      if(target.getNumServicio() == numServicio)
+        return target;
+    }
+    return null;
+  }
+
 }

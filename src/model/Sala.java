@@ -7,16 +7,18 @@ public class Sala {
     private int capacidad;
     private int horarioAtencionInicio;
     private int horarioAtencionFin;
-    private Collection<Servicio> listaServicio;
+    private int costoMatreicula;
+    private int mensualidad;
+    private Collection<Servicio> listaServicio ;
     private Collection<Instructor> listaInstructores;
 
-    public Sala(String nombre, int capacidad, int horarioAtencionInicio, int horarioAtencionFin, Collection<Servicio> listaServicio, Collection<Instructor> listaInstructores) {
+    public Sala(String nombre, int capacidad, int horarioAtencionInicio, int horarioAtencionFin, int costoMatreicula, int mensualidad) {
         this.nombre = nombre;
         this.capacidad = capacidad;
         this.horarioAtencionInicio = horarioAtencionInicio;
         this.horarioAtencionFin = horarioAtencionFin;
-        this.listaServicio = listaServicio;
-        this.listaInstructores = listaInstructores;
+        this.costoMatreicula = costoMatreicula;
+        this.mensualidad = mensualidad;
     }
 
     public String getNombre() {
@@ -74,6 +76,21 @@ public class Sala {
     public void addToListaInstructores(Instructor instructor){
         this.listaInstructores.add(instructor);
     }
-    
+
+    public int getCostoMatreicula() {
+        return costoMatreicula;
+    }
+
+    public void setCostoMatreicula(int costoMatreicula) {
+        this.costoMatreicula = costoMatreicula;
+    }
+
+    public int getMensualidad() {
+        return mensualidad;
+    }
+
+    public void setMensualidad(int mensualidad) {
+        this.mensualidad = mensualidad;
+    }
 }
 

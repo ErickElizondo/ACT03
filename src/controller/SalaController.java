@@ -9,6 +9,10 @@ public class SalaController {
 	this.model = model;
   }
 
+  public SalaController() {
+
+  }
+
   public Sala getModel() {
     return model;
   }

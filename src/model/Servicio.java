@@ -1,41 +1,15 @@
 package model;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class Servicio {
-    private Horario horarioInstructor;
-    private int costoMatreicula;
-    private int mensualidad;
     private int numServicio;
     private Entrenamiento tipoEntrenamiento;
+    private static final AtomicInteger count = new AtomicInteger(0);
 
-    public Servicio(int costoMatreicula, int mensualidad, int numServicio, Entrenamiento tipoEntrenamiento) {
-        this.costoMatreicula = costoMatreicula;
-        this.mensualidad = mensualidad;
-        this.numServicio = numServicio;
+    public Servicio(Entrenamiento tipoEntrenamiento) {
+        this.numServicio = count.incrementAndGet(); //Para evitar ver si existe el numServicio, es como el IDENITTY
         this.tipoEntrenamiento = tipoEntrenamiento;
-    }
-
-    public Horario getHorarioInstructor() {
-        return horarioInstructor;
-    }
-
-    public void setHorarioInstructor(Horario horarioInstructor) {
-        this.horarioInstructor = horarioInstructor;
-    }
-
-    public int getCostoMatreicula() {
-        return costoMatreicula;
-    }
-
-    public void setCostoMatreicula(int costoMatreicula) {
-        this.costoMatreicula = costoMatreicula;
-    }
-
-    public int getMensualidad() {
-        return mensualidad;
-    }
-
-    public void setMensualidad(int mensualidad) {
-        this.mensualidad = mensualidad;
     }
 
     public int getNumServicio() {
@@ -52,5 +26,10 @@ public class Servicio {
 
     public void setTipoEntrenamiento(Entrenamiento tipoEntrenamiento) {
         this.tipoEntrenamiento = tipoEntrenamiento;
+    }
+
+    public void mostrarDatos(){
+        System.out.println("numServicio: "+ numServicio);
+        System.out.println("Tipo de entrenamiento: " + tipoEntrenamiento.getEntrenamiento());
     }
 }

@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Instructor extends Persona{
     private int idInstructor;
-    private ArrayList<Servicio> especialidades;
+    private ArrayList<Servicio> especialidades = new ArrayList<>();
     public Instructor(String identificacion, String nombre, String apellido1, String apellido2, int celular, String correo, int idInstructor) {
         super(identificacion, nombre, apellido1, apellido2, celular, correo);
         this.idInstructor = idInstructor;
