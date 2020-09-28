@@ -1,4 +1,5 @@
 package model;
 
-public class Dia {
+public enum Dia {
+    LUNES,MARTES,MIERCOLES,JUEVES,VIERNES,SABADO,DOMINGO
 }
