@@ -5,7 +5,15 @@ import model.Persona;
 public class PersonaController {
   private Persona model;
   
-  public PersonaController(Persona pModel){
-	model = pModel;
+  public PersonaController(Persona model){
+	this.model = model;
+  }
+
+  public Persona getModel() {
+    return model;
+  }
+
+  public void setModel(Persona model) {
+    this.model = model;
   }
 }
