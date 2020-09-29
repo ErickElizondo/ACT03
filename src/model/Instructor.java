@@ -24,4 +24,18 @@ public class Instructor extends Persona{
     public void setEspecialidades(ArrayList<Servicio> especialidades) {
         this.especialidades = especialidades;
     }
+
+    @Override
+    public String toString() {
+        return "Instructor{" +
+                "idInstructor=" + idInstructor +
+                ", especialidades=" + especialidades +
+                ", identificacion='" + identificacion + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", apellido1='" + apellido1 + '\'' +
+                ", apellido2='" + apellido2 + '\'' +
+                ", celular=" + celular +
+                ", correo='" + correo + '\'' +
+                '}';
+    }
 }

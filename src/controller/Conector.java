@@ -4,6 +4,8 @@ import model.Clase;
 import model.Entrenamiento;
 import model.Sala;
 import model.Servicio;
+import model.Instructor;
+
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -11,14 +13,18 @@ import java.util.Scanner;
 public class Conector {
     private static SalaController salaCont = new SalaController();
     private static ServicioController servicioCont = new ServicioController();
+    private static PersonaController instructorCont = new PersonaController();
     private static Scanner scan = new Scanner(System.in);
     private static ArrayList<Entrenamiento> entrenamientos = new ArrayList<>();
+    private static ArrayList<Instructor> instructores = new ArrayList<>();
     public static void main(String[] args) {
         loop: while(true){
             System.out.println("Menu:");
             System.out.println("1. Definir sala");
             System.out.println("2. Registrar Servicio");
-            System.out.println("3. Visualizar Servicio");
+            System.out.println("20. Visualizar Servicio");
+            System.out.println("3. Registrar Instructor");
+            System.out.println("30. Visualizar instructores");
             int input = scan.nextInt();
             switch (input){
                 case 1:
@@ -27,8 +33,14 @@ public class Conector {
                 case 2:
                     crearServicio();
                     break;
-                case 3:
+                case 20:
                     mostrarServicio();
+                    break;
+                case 3:
+                    crearInstructor();
+                    break;
+                case 30:
+                    mostrarInstructores();
                     break;
                 default:
                     break loop;
@@ -77,6 +89,32 @@ public class Conector {
         }*/
 
     }
+    public static void crearInstructor(){
+        System.out.println("Indique el número de identificación: ");
+        String identificacion = scan.next();
+
+        System.out.println("Nombre del instructor: ");
+        String nombre = scan.next();
+
+        System.out.println("Primer apellido del instructor: ");
+        String apellido1 = scan.next();
+
+        System.out.println("Segundo apellido del instructor: ");
+        String apellido2 = scan.next();
+
+        System.out.println("Número de celular del instructor: ");
+        int celular = scan.nextInt();
+
+        System.out.println("Correo electronico del instructor: ");
+        String correo = scan.next();
+
+        System.out.println("Código del instructor: ");
+        int idInstructor = scan.nextInt();
+
+        instructorCont = new PersonaController(new Instructor(identificacion, nombre, apellido1, apellido2, celular, correo, idInstructor));
+        instructores.add(new Instructor(identificacion, nombre, apellido1, apellido2, celular, correo, idInstructor));
+        System.out.println("Se ha creado el instructor para la sala actual");
+    }
 
     public static Entrenamiento crearEntrenamiento(){
         System.out.println("Defina el tipo de entrenamiento");
@@ -109,5 +147,12 @@ public class Conector {
             System.out.println("No existe ese servicio");
     }
 
-
+    public static void mostrarInstructores(){
+        if(instructores.isEmpty()){
+            for(Instructor instructor:instructores) {
+                System.out.println(instructor.toString());
+            }
+        }else
+            System.out.println("No hay instructores en la sala");
+    }
 }
