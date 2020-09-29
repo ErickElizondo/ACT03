@@ -9,6 +9,10 @@ public class PersonaController {
 	this.model = model;
   }
 
+  public PersonaController() {
+
+  }
+
   public Persona getModel() {
     return model;
   }
