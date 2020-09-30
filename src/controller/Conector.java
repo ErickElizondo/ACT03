@@ -39,7 +39,7 @@ public class Conector {
 	  System.out.println("20. Visualizar Servicio");
 	  System.out.println("3. Registrar Instructor");
 	  System.out.println("30. Visualizar instructores");
-	  System.out.println("4. Registrar clientre");
+	  System.out.println("4. Registrar cliente");
 	  System.out.println("5. Programar clase");
 	  System.out.println("6. Reservar clase");
 	  System.out.println("7. Ver una clase");
@@ -88,7 +88,7 @@ public class Conector {
 	System.out.println("Indique la hora de inicio ");
 	int horaInicio = scan.nextInt();
 
-	System.out.println("Indique la hora de finalizacionn ");
+	System.out.println("Indique la hora de finalizacion ");
 	int horaFin = scan.nextInt();
 
 	System.out.println("Indique el costo de la matricula ");
@@ -108,7 +108,7 @@ public class Conector {
 	Servicio servicio = new Servicio(descripcion);
 	if(!servicioCont.isRepeatead(descripcion)) {
 	  servicioCont.getServicios().add(servicio);
-	  System.out.println("Se ha agregado el servicion");
+	  System.out.println("Se ha agregado el servicio");
 	}else {
 	  System.out.println("No se ha agregado el servicio");
 	}
@@ -185,9 +185,6 @@ public class Conector {
 	  Cliente cliente = new Cliente(identificacion, nombre, apellido1, apellido2, celular, correo, idCliente, TipoEstado.inactivo);
 	  personas.addCliente(cliente);
 	  System.out.println("Se ha agregado el cliente");
-	  for(Cliente cliente2: personas.getClientes()) {
-		System.out.println(cliente2.getIdentificacion());
-	  }
 	}else {
 	  System.out.println("No se ha podido agregar el cliente");
 	}
