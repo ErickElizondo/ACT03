@@ -4,13 +4,11 @@ import model.Sala;
 
 public class SalaController {
   private Sala model;
-
+  
+  public SalaController() {}
+  
   public SalaController(Sala model) {
 	this.model = model;
-  }
-
-  public SalaController() {
-
   }
 
   public Sala getModel() {

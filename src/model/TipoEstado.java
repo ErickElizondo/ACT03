@@ -1,7 +1,7 @@
 package model;
 
 public enum TipoEstado {
-    activo,
-    inactivo,
-    moroso
+  activo,
+  inactivo,
+  moroso
 }

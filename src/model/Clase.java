@@ -1,57 +1,57 @@
 package model;
 import java.util.ArrayList;
 public class Clase {
-    private Instructor instructor;
-    private boolean esTemporal;
-    private int numeroClase;
+  private Instructor instructor;
+  private boolean esTemporal;
+  private int numeroClase;
 
-    private ArrayList<Integer> hora = new ArrayList<>();
-    private ArrayList<Cliente> listaClientes = new ArrayList<>();
+  private ArrayList<Integer> hora = new ArrayList<>();
+  private ArrayList<Cliente> listaClientes = new ArrayList<>();
 
-    public Clase(Instructor instructor, boolean esTemporal, int numeroClase) {
-        this.instructor = instructor;
-        this.esTemporal = esTemporal;
-        this.numeroClase = numeroClase;
-    }
+  public Clase(Instructor instructor, boolean esTemporal, int numeroClase) {
+	this.instructor = instructor;
+	this.esTemporal = esTemporal;
+	this.numeroClase = numeroClase;
+  }
 
-    public Instructor getInstructor() {
-        return instructor;
-    }
+  public Instructor getInstructor() {
+	return instructor;
+  }
 
-    public void setInstructor(Instructor instructor) {
-        this.instructor = instructor;
-    }
+  public void setInstructor(Instructor instructor) {
+	this.instructor = instructor;
+  }
 
-    public boolean isEsTemporal() {
-        return esTemporal;
-    }
+  public boolean isEsTemporal() {
+	return esTemporal;
+  }
 
-    public void setEsTemporal(boolean esTemporal) {
-        this.esTemporal = esTemporal;
-    }
+  public void setEsTemporal(boolean esTemporal) {
+	this.esTemporal = esTemporal;
+  }
 
-    public ArrayList<Integer> getHora() {
-        return hora;
-    }
+  public ArrayList<Integer> getHora() {
+	return hora;
+  }
 
-    public void setHora(ArrayList<Integer> hora) {
-        this.hora = hora;
-    }
+  public void setHora(ArrayList<Integer> hora) {
+	this.hora = hora;
+  }
 
-    public ArrayList<Cliente> getListaClientes() {
-        return listaClientes;
-    }
+  public ArrayList<Cliente> getListaClientes() {
+	return listaClientes;
+  }
 
-    public void setListaClientes(ArrayList<Cliente> listaClientes) {
-        this.listaClientes = listaClientes;
-    }
+  public void setListaClientes(ArrayList<Cliente> listaClientes) {
+	this.listaClientes = listaClientes;
+  }
 
-    public int getNumeroClase() {
-        return numeroClase;
-    }
+  public int getNumeroClase() {
+	return numeroClase;
+  }
 
-    public void setNumeroClase(int numeroClase) {
-        this.numeroClase = numeroClase;
-    }
+  public void setNumeroClase(int numeroClase) {
+	this.numeroClase = numeroClase;
+  }
 
 }

@@ -1,19 +1,23 @@
 package controller;
 
+import java.util.ArrayList;
+
 import model.Clase;
 
 public class ClaseController {
-  private Clase model;
+  private ArrayList<Clase> clases = new ArrayList<>();
   
-  public ClaseController(Clase model) {
-	this.model = model;
+  public ClaseController() {}
+
+  public ArrayList<Clase> getClases() {
+    return clases;
   }
 
-  public Clase getModel() {
-    return model;
+  public void setClases(ArrayList<Clase> clases) {
+    this.clases = clases;
   }
-
-  public void setModel(Clase model) {
-    this.model = model;
+  
+  public void addClase(Clase clase) {
+	clases.add(clase);
   }
 }

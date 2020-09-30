@@ -1,19 +1,19 @@
 package controller;
 
+import java.util.ArrayList;
+
 import model.Horario;
 
 public class HorarioController {
-  private Horario model;
+  private ArrayList<Horario> horarios = new ArrayList<>();
   
-  public HorarioController(Horario model) {
-	this.model = model;
+  public HorarioController(Horario model) {}
+
+  public ArrayList<Horario> getHorarios() {
+    return horarios;
   }
 
-  public Horario getModel() {
-    return model;
-  }
-
-  public void setModel(Horario model) {
-    this.model = model;
+  public void setHorarios(ArrayList<Horario> horarios) {
+    this.horarios = horarios;
   }
 }

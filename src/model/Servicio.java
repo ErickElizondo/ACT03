@@ -3,33 +3,33 @@ package model;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Servicio {
-    private int numServicio;
-    private Entrenamiento tipoEntrenamiento;
-    private static final AtomicInteger count = new AtomicInteger(0);
+  private int numServicio;
+  private String descripcion;
+  private static final AtomicInteger count = new AtomicInteger(0);
 
-    public Servicio(Entrenamiento tipoEntrenamiento) {
-        this.numServicio = count.incrementAndGet(); //Para evitar ver si existe el numServicio, es como el IDENITTY
-        this.tipoEntrenamiento = tipoEntrenamiento;
-    }
+  public Servicio(String descripcion) {
+	this.numServicio = count.incrementAndGet(); //Para evitar ver si existe el numServicio, es como el IDENITTY
+	this.descripcion = descripcion;
+  }
 
-    public int getNumServicio() {
-        return numServicio;
-    }
+  public int getNumServicio() {
+	return numServicio;
+  }
 
-    public void setNumServicio(int numServicio) {
-        this.numServicio = numServicio;
-    }
+  public void setNumServicio(int numServicio) {
+	this.numServicio = numServicio;
+  }
 
-    public Entrenamiento getTipoEntrenamiento() {
-        return tipoEntrenamiento;
-    }
+  public String getDescripcion() {
+	return descripcion;
+  }
 
-    public void setTipoEntrenamiento(Entrenamiento tipoEntrenamiento) {
-        this.tipoEntrenamiento = tipoEntrenamiento;
-    }
+  public void setDescripcion(String descripcion) {
+	this.descripcion = descripcion;
+  }
 
-    public void mostrarDatos(){
-        System.out.println("numServicio: "+ numServicio);
-        System.out.println("Tipo de entrenamiento: " + tipoEntrenamiento.getEntrenamiento());
-    }
+  public void mostrarDatos(){
+	System.out.println("numServicio: "+ numServicio);
+	System.out.println("Tipo de servicio: " + descripcion);
+  }
 }
