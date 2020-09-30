@@ -33,7 +33,7 @@ public class Conector {
 		crearServicio();
 		break;
 	  case 20:
-		mostrarServicio();
+		mostrarServicios();
 		break;
 	  case 3:
 		crearInstructor();
@@ -84,7 +84,7 @@ public class Conector {
 	String descripcion = scan.next();
 	Servicio servicio = new Servicio(descripcion);
 	if(!servicioCont.isRepeatead(descripcion)) {
-	  servicioCont.getModel().add(servicio);
+	  servicioCont.getServicios().add(servicio);
 	  System.out.println("Se ha agregado el servicion");
 	}else {
 	  System.out.println("No se ha agregado el servicio");
@@ -117,19 +117,19 @@ public class Conector {
 	System.out.println("Se ha creado el instructor para la sala actual");
   }
 
-  public static void mostrarServicio(){
-	System.out.println("Indique el codigo del servicio: ");
-	int codigo = scan.nextInt();
-	Servicio servicio = servicioCont.findServicio(codigo);
-	if(servicio!=null){
-	  servicio.mostrarDatos();
+  public static void mostrarServicios(){
+	ArrayList<Servicio> servicios = servicioCont.getServicios();
+	if(!servicios.isEmpty()){
+	  for(Servicio servicio: servicios) {
+		System.out.println(servicio.toString());
+	  }
 	}else
-	  System.out.println("No existe ese servicio");
+	  System.out.println("No hay servicios en la sala");
   }
 
   public static void mostrarInstructores(){
 	ArrayList<Instructor> instructores= personas.getInstructores();
-	if(instructores.isEmpty()){
+	if(!instructores.isEmpty()){
 	  for(Instructor instructor: instructores) {
 		System.out.println(instructor.toString());
 	  }

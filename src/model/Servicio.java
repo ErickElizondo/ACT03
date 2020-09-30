@@ -28,8 +28,7 @@ public class Servicio {
 	this.descripcion = descripcion;
   }
 
-  public void mostrarDatos(){
-	System.out.println("numServicio: "+ numServicio);
-	System.out.println("Tipo de servicio: " + descripcion);
+  public String toString(){
+	return "numServicio: " + numServicio + "\n"+ "Tipo de servicio: " + descripcion;
   }
 }

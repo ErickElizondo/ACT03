@@ -5,19 +5,18 @@ import model.Servicio;
 import java.util.ArrayList;
 
 public class ServicioController {
-  private ArrayList<Servicio> models = new ArrayList<>();
+  private ArrayList<Servicio> servicios = new ArrayList<>();
 
-  public ArrayList<Servicio> getModel() {
-    return models;
+  public ArrayList<Servicio> getServicios() {
+    return servicios;
   }
 
-  public void setModel(ArrayList<Servicio> model) {
-    this.models = model;
+  public void setServicios(ArrayList<Servicio> servicios) {
+    this.servicios = servicios;
   }
   
   public Servicio findServicio(int numServicio){
-    for (Servicio target:models
-         ) {
+    for (Servicio target:servicios) {
       if(target.getNumServicio() == numServicio)
         return target;
     }
@@ -25,7 +24,7 @@ public class ServicioController {
   }
   
   public boolean isRepeatead(String descripcion) {
-	for(Servicio servicio: models) {
+	for(Servicio servicio: servicios) {
 	  if(servicio.getDescripcion().equals(descripcion)) {
 		return true;
 	  }
