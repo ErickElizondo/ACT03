@@ -1,17 +1,23 @@
 package model;
+
 import java.util.ArrayList;
+
 public class Clase {
   private Instructor instructor;
   private boolean esTemporal;
   private int numeroClase;
-
-  private ArrayList<Integer> hora = new ArrayList<>();
+  private Horario hora;
   private ArrayList<Cliente> listaClientes = new ArrayList<>();
+  private int aforo;
+  private Servicio tipoServicio;
 
-  public Clase(Instructor instructor, boolean esTemporal, int numeroClase) {
+  public Clase(Instructor instructor, boolean esTemporal, int numeroClase, int aforo, Horario hora, Servicio tipoServicio) {
 	this.instructor = instructor;
 	this.esTemporal = esTemporal;
 	this.numeroClase = numeroClase;
+	this.aforo = aforo;
+	this.hora = hora;
+	this.tipoServicio = tipoServicio;
   }
 
   public Instructor getInstructor() {
@@ -30,11 +36,11 @@ public class Clase {
 	this.esTemporal = esTemporal;
   }
 
-  public ArrayList<Integer> getHora() {
+  public Horario getHora() {
 	return hora;
   }
 
-  public void setHora(ArrayList<Integer> hora) {
+  public void setHora(Horario hora) {
 	this.hora = hora;
   }
 
@@ -54,4 +60,19 @@ public class Clase {
 	this.numeroClase = numeroClase;
   }
 
+  public int getAforo() {
+	return aforo;
+  }
+
+  public void setAforo(int aforo) {
+	this.aforo = aforo;
+  }
+
+  public Servicio getTipoServicio() {
+    return tipoServicio;
+  }
+
+  public void setTipoServicio(Servicio tipoServicio) {
+    this.tipoServicio = tipoServicio;
+  }
 }

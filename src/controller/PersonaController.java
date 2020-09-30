@@ -34,4 +34,32 @@ public class PersonaController {
   public void addInstructor(Instructor instructor) {
 	instructores.add(instructor);
   }
+  
+  public  Cliente getClienteByID(int id) {
+	for(Cliente cliente: clientes) {
+	  if(cliente.getIdCliente() == id) {
+		return cliente;
+	  }
+	}
+	return null;
+  }
+  
+  public  Cliente getClienteByCed(String ced) {
+	for(Cliente cliente: clientes) {
+	  if(cliente.getIdentificacion().equals(ced)) {
+		return cliente;
+	  }
+	}
+	return null;
+  }
+  
+  public Instructor getInstructorById(int id) {
+	for(Instructor instructor: instructores) {
+	  if(instructor.getIdInstructor() == id) {
+		return instructor;
+	  }
+	}
+	return null;
+}
+  
 }
